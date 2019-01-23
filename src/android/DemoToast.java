@@ -1,4 +1,4 @@
-package org.apache.cordova;
+package org.apache.cordova.toast;
 
 import android.widget.Toast;
 
