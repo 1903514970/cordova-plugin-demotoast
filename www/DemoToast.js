@@ -22,12 +22,15 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-    toastLong:function (message,resultCallback) {
-        exec(resultCallback,null,"DemoToast","toastLong",[message]);
-    },
-
-    toast:function (message,resultCallback) {
-        exec(resultCallback,null,"DemoToast","toast",[message]);
+    /**
+     *
+     * @param method
+     * @param args
+     * @param successCallback
+     * @param failCallback
+     */
+    exec(method,args,successCallback,failCallback){
+        exec(successCallback,failCallback,"DemoToast",method,args);
     }
 };
 
